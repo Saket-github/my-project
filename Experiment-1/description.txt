@@ -1,0 +1,15 @@
+In this experiment I have created a student registration form.
+In the starting of body tag I use the heading tag to show the name of the form.
+Then I use, form tag to make the form.
+Now in form tag I use label tag which tells the user that we have to write the name here. Here we use for="name" 
+which tells user that this label is linked with which input field.
+Then I make a input field in which I use type(text,numbers,etc.), id, name(optional), placeholder(which shows hint
+in the input box), required(which make the thing mandatory), minlength or maxlength of the text.
+Then use of break tag for breaking line or for giving space.
+Then again uses the label and input tag for email and age.
+And in the last I have created a submit button for submitting the form using input tag.
+Finally close the form, body and html tag respectively.
+
+<link rel="stylesheet" href="style.css"> this line is used in head section which link the external css file with
+html file. This external css file helps us to do styling(colors, font, spacing,etc.) in the form, as I give red 
+color as a background color.
