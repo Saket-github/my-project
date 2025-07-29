@@ -11,5 +11,5 @@ And in the last I have created a submit button for submitting the form using inp
 Finally close the form, body and html tag respectively.
 
 <link rel="stylesheet" href="style.css"> this line is used in head section which link the external css file with
-html file. This external css file helps us to do styling(colors, font, spacing,etc.) in the form, as I give red 
+html file. This external css file helps us to do styling(colors, font, etc.) in the form, as I give red 
 color as a background color.
