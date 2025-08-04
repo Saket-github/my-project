@@ -1,0 +1,15 @@
+HTML : 
+In the HTML part I have created a basic structure of a banking interface.
+In starting I use the div tag to make two boxes (outer and inner).
+The outer box  acts like a container that holds everything and helps to keep the content in the middle of the screen.
+Inside this outer box I placed inner_box, which contains the main content.
+In the inner box I added a heading  h1 that displays the current balance which is shown as $0.
+Below the heading I added two buttons one for depositing money and another one for withdrawing money.
+
+CSS :
+In the CSS part I styled the web page for giving styling to it, which make its look better 
+I started by setting the background color of the page to a light grey and used flexbox to center
+I gave the outer box a light background color rounded corners and a shadow to make it look like organize.
+Inside this, the inner box has a white background some padding rounded corners and a smaller shadow for a neat look. 
+For the buttons I gave them padding and made their corner rounded.
+I used green color for the Deposit button to show it's for adding money, and red color for the Withdraw.
