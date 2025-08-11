@@ -1,12 +1,12 @@
 For the HTML, I first created a hidden checkbox that works as a theme switch between light
-and dark mode. Then I built a main container called `dashboard` that holds the header,
-sidebar, main content, and footer. In the header, I added the title “Admin Dashboard” and
-a dark mode toggle made from a label linked to the hidden checkbox with a small square box
-and “Dark Mode” text. The sidebar contains navigation links for Home, Users, and Settings,
-the main section has a welcome message and placeholder text for dashboard content, and the
-footer shows copyright information.
+and dark mode. Then I built a main container that holds the header,sidebar, main content, 
+and footer. In the header, I added the title “Admin Dashboard” and a dark mode toggle made 
+from a label linked to the hidden checkbox with a small square box and “Dark Mode” text. 
+The sidebar contains navigation links for Home, Users, and Settings,the main section has a
+welcome message and placeholder text for dashboard content, and the footer shows copyright 
+information.
 
-For the CSS, I started by setting up light theme colors using CSS variables in `:root`.
+For the CSS, I started by setting up light theme colors using CSS variables.
 Then I defined a dark theme that activates when the checkbox is checked, changing
 background, text, and element colors. I styled the body to use these variables and used
 CSS Grid to arrange the dashboard into header, sidebar, main content, and footer areas.
