@@ -1,0 +1,81 @@
+WebRTC Multi-Party Conference — Problem Statement
+
+Goal:-----
+--Design and implement a multi-party audio/video conferencing prototype using WebRTC for peer-to-peer media exchange and a Node.js + WebSocket signaling server for session coordination. The client is built in React, supporting small-group mesh calls with live controls, screen sharing, and adaptive quality management.
+
+Core Components:-----
+--Signaling Server (Node.js + WebSocket)
+--Handles room create/join/leave.
+--Relays SDP offers/answers and ICE candidates.
+--Broadcasts participant presence and updates.
+--Uses MongoDB for storing rooms, participants, and basic call logs.
+--Supports JWT authentication and room-scoped tokens.
+--WebRTC Peer Connections
+--P2P mesh architecture (small rooms).
+--Manages audio/video/screen tracks with dynamic add/remove and renegotiation.
+--Auto ICE restarts and STUN/TURN for NAT traversal.
+--Detects connectivity loss and reconnects gracefully.
+--React Client
+--Grid view of all participants with active-speaker highlighting.
+--Mute/unmute mic, toggle camera, share screen.
+--Device chooser for input/output.
+--Connection quality indicators and adaptive bitrate/resolution.
+--Automatic reconnection on network drops.
+--Media & Quality Control
+--Customizable getUserMedia constraints (HD, SD, Low).
+--Simulcast or per-sender bitrate caps.
+--Dynamic degradation preference under poor networks.
+--Session Persistence (MongoDB)
+--Stores room info, join/leave times, and call stats.
+--Short-lived tokens for room access and participant sessions.
+--Resilience & Security
+--Auto reconnect with exponential backoff.
+--Graceful teardown on tab close.
+--JWT-based auth, CORS/origin checks, and optional end-to-end encryption (Insertable Streams).
+
+Optional Enhancements:----
+--In-room text chat and reactions using the same signaling channel.
+--Structured logs, health endpoints, and basic metrics (participants, bitrate, packet loss).
+--Local setup scripts for Node.js, MongoDB, React, and coturn.
+
+Outcome:--
+--A working small-group video conferencing prototype that demonstrates:
+--Real-time WebRTC communication with adaptive behavior.
+--Reliable NAT traversal and reconnection.
+--Secure signaling and tokenized room access.
+--Extendable foundation for full-scale conferencing apps.
+
+🎯 Learning Outcomes:-------
+
+--Understanding Real-Time Communication Concepts
+--Learn how WebRTC enables peer-to-peer audio, video, and data transfer directly between browsers.
+--Understand core WebRTC components: SDP negotiation, ICE candidates, STUN/TURN servers, and media streams.
+--Building and Managing Peer Connections
+--Gain practical experience in setting up and managing multiple RTCPeerConnections in a mesh topology for small group calls.
+--Learn how to handle renegotiation, screen sharing, and dynamic track replacement.
+--Implementing Signaling Mechanisms
+--Learn to build a Node.js WebSocket signaling server for session orchestration.
+--Understand offer/answer exchange, ICE candidate relay, and room-level presence updates.
+--Developing Real-Time React Interfaces
+--Build an interactive React UI for live video tiles, mute/unmute, camera toggle, and screen share.
+--Learn to manage local/remote media streams and device selection using getUserMedia() and MediaStreamTrack APIs.
+--Network and Media Quality Management
+--Learn techniques for bandwidth adaptation, simulcast, and quality control under varying network conditions.
+--Understand how to monitor connection health and adjust parameters dynamically.
+--Session Persistence and State Handling
+--Use MongoDB to store room data, participants, and call statistics.
+--Learn to design schemas for real-time systems and manage transient vs persistent data.
+--Security and Authentication in WebRTC Systems
+--Understand JWT-based authentication, room-scoped tokens, and CORS/WebSocket origin validation.
+--Explore optional end-to-end encryption (E2EE) concepts using Insertable Streams.
+--Resilience and Error Recovery
+--Implement auto-reconnect, ICE restarts, and graceful teardown mechanisms for reliable performance.
+--Learn to design recovery logic using exponential backoff and retry policies.
+--DevOps and Observability Skills
+--Learn how to log, monitor, and measure system performance (participants count, bitrate, latency).
+--Gain hands-on experience setting up local dev environments for Node.js, React, MongoDB, and TURN servers.
+--Team Collaboration and Full-Stack Integration
+--Apply both frontend and backend skills to build a complete real-time web application.
+--Understand the importance of coordination between UI, signaling, and network layers.
+
+
